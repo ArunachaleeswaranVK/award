@@ -20,7 +20,7 @@ class BestaccreditedstudentbranchesController < ApplicationController
         
         if @bestaccreditedstudentbranch.save
             redirect_to @bestaccreditedstudentbranch
-        else 
+        else
             render "new"
         end    
     end
