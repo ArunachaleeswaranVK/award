@@ -73,5 +73,7 @@
       <%=  @highestsponsorshipofcsievent.no_of_csi_voulenteers_added %>
       
     </div>
-    
-<%= link_to "Delete" , highestsponsorshipofcsievent_path(@highestsponsorshipofcsievent), method: :delete , data: {confirm: "Are you sure ?"}  %>   
+
+<%= link_to "Edit Details" ,   edit_bestaccreditedstudentbranch_path(@highestsponsorshipofcsievent) %> |      
+<%= link_to "Delete" , highestsponsorshipofcsievent_path(@highestsponsorshipofcsievent), method: :delete , data: {confirm: "Are you sure ?"}  %> |  
+<%= link_to "Apply for another Award" , root_path %>

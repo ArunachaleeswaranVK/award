@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170724151915) do
+ActiveRecord::Schema.define(version: 20170725155634) do
 
   create_table "bestaccreditedstudentbranches", force: :cascade do |t|
     t.integer  "institution_membership_no"
@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 20170724151915) do
     t.integer  "no_of_csi_voulenteers_added"
     t.datetime "created_at",                  null: false
     t.datetime "updated_at",                  null: false
+    t.integer  "user_id"
   end
 
   create_table "bestcsiinternationalstudentseventhosts", force: :cascade do |t|
@@ -55,6 +56,7 @@ ActiveRecord::Schema.define(version: 20170724151915) do
     t.integer  "no_of_csi_voulenteers_added"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
+    t.integer  "user_id"
   end
 
   create_table "facmaxpublishings", force: :cascade do |t|
@@ -77,6 +79,7 @@ ActiveRecord::Schema.define(version: 20170724151915) do
     t.boolean  "institution_has_student_branch"
     t.datetime "created_at",                                 null: false
     t.datetime "updated_at",                                 null: false
+    t.integer  "user_id"
   end
 
   create_table "highestsponsorshipofcsievents", force: :cascade do |t|
@@ -100,6 +103,7 @@ ActiveRecord::Schema.define(version: 20170724151915) do
     t.integer  "no_of_csi_voulenteers_added"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
+    t.integer  "user_id"
   end
 
   create_table "longestcontinuoussbcs", force: :cascade do |t|
@@ -124,15 +128,16 @@ ActiveRecord::Schema.define(version: 20170724151915) do
     t.integer  "no_of_csi_voulenteers_added"
     t.datetime "created_at",                                 null: false
     t.datetime "updated_at",                                 null: false
+    t.integer  "user_id"
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "email",                  default: "", null: false
-    t.string   "encrypted_password",     default: "", null: false
+    t.string   "email",                  default: "",    null: false
+    t.string   "encrypted_password",     default: "",    null: false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0,  null: false
+    t.integer  "sign_in_count",          default: 0,     null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
@@ -141,8 +146,9 @@ ActiveRecord::Schema.define(version: 20170724151915) do
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
     t.string   "unconfirmed_email"
-    t.datetime "created_at",                          null: false
-    t.datetime "updated_at",                          null: false
+    t.datetime "created_at",                             null: false
+    t.datetime "updated_at",                             null: false
+    t.boolean  "admin",                  default: false
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

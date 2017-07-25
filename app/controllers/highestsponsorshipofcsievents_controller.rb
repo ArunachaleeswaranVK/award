@@ -1,5 +1,6 @@
 class HighestsponsorshipofcsieventsController < ApplicationController
     before_action :set_award , only: [:edit,:update,:show,:destroy]
+    before_action :authenticate_user!, except: [:index,:show]
     
     
     def index

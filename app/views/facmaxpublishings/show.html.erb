@@ -71,5 +71,6 @@
       <%=  @facmaxpublishing.institution_has_student_branch %>
     </div>
     
-    
-<%= link_to "Delete" , facmaxpublishing_path(@facmaxpublishing), method: :delete , data: {confirm: "Are you sure ?"}  %>   
+<%= link_to "Edit Details" ,   edit_bestaccreditedstudentbranch_path(@facmaxpublishing) %> |     
+<%= link_to "Delete" , facmaxpublishing_path(@facmaxpublishing), method: :delete , data: {confirm: "Are you sure ?"}  %>   |
+<%= link_to "Apply for another Award" , root_path %>

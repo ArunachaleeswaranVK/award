@@ -66,4 +66,6 @@
       
     </div>
     
-<%= link_to "Delete" , bestaccreditedstudentbranch_path(@bestaccreditedstudentbranch), method: :delete , data: {confirm: "Are you sure ?"}  %>   
+<%= link_to "Edit Details" ,   edit_bestaccreditedstudentbranch_path(@bestaccreditedstudentbranch) %> |
+<%= link_to "Delete" , bestaccreditedstudentbranch_path(@bestaccreditedstudentbranch), method: :delete , data: {confirm: "Are you sure ?"}  %> | 
+<%= link_to "Apply for another Award" , root_path %>
