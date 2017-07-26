@@ -1,5 +1,8 @@
-<h2>bestaccreditedstudentbranches</h2>
-
+<h2>BEST ACCREDITED STUDENT BRANCHES</h2>
+<% j=1 %>
 <% @bestaccreditedstudentbranches.each do |i| %>
-    <%= link_to i.name_of_the_institution , i  %>
+    
+    <%= j %> ) <%= link_to i.name_of_the_institution , i  %>
+    <% j+=1 %>
+    <br>
 <% end %>    

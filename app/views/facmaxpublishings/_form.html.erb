@@ -1,78 +1,78 @@
-<%= form_for @facmaxpublishing do |f| %>
-    <div>
+<%= form_for @facmaxpublishing, :html => {:class => "form-horizontal"} do |f| %>
+    <div class="form-group">
       <%= f.label :name_of_faculty %>
-      <%= f.text_field :name_of_faculty %>
+      <%= f.text_field :name_of_faculty, class: "form-control" %>
     </div>
-    <div>
+    <div class="form-group">
       <%= f.label :name_of_the_institution %>
-      <%= f.text_field :name_of_the_institution %>
+      <%= f.text_field :name_of_the_institution , class: "form-control"%>
     </div>
-    <div>
+    <div class="form-group">
       <%= f.label :postal_address %>
-      <%= f.text_field :postal_address %>
+      <%= f.text_field :postal_address, class: "form-control" %>
     </div>
-    <div>
+    <div class="form-group">
       <%= f.label :city %>
-      <%= f.text_field :city %>
+      <%= f.text_field :city, class: "form-control" %>
     </div>
-    <div>
+    <div class="form-group">
       <%= f.label :pin %>
-      <%= f.text_field :pin %>
+      <%= f.text_field :pin , class: "form-control"%>
     </div>
-    <div>
+    <div class="form-group">
       <%= f.label :state %>
-      <%= f.text_field :state %>
+      <%= f.text_field :state, class: "form-control" %>
     </div>
-    <div>
+    <div class="form-group">
       <%= f.label :phone_number %>
-      <%= f.text_field :phone_number %>
+      <%= f.text_field :phone_number, class: "form-control" %>
     </div>
-    <div>
+    <div class="form-group">
       <%= f.label :emailID %>
-      <%= f.email_field :emailID %>
+      <%= f.email_field :emailID, class: "form-control" %>
     </div>
-    <div>
+    <div class="form-group">
       <%= f.label :name_of_head_of_institution %>
-      <%= f.text_field :name_of_head_of_institution %>
+      <%= f.text_field :name_of_head_of_institution, class: "form-control" %>
     </div>
-    <div>
+    <div class="form-group">
       <%= f.label :designation %>
-      <%= f.text_field :designation %>
+      <%= f.text_field :designation, class: "form-control" %>
     </div>
    
     
-    <div>
+    <div class="form-group">
       <%= f.label :head_of_institution_emailID %>
-      <%= f.text_field :head_of_institution_emailID %>
+      <%= f.text_field :head_of_institution_emailID, class: "form-control" %>
     </div>
-    <div>
+    <div class="form-group">
       <%= f.label :candidate_emailID %>
-      <%= f.text_field :candidate_emailID %>
+      <%= f.text_field :candidate_emailID, class: "form-control" %>
     </div>
-    <div>
+    <div class="form-group">
       <%= f.label :Institution_membership_number %>
-      <%= f.text_field :Institution_membership_number %>
+      <%= f.text_field :Institution_membership_number , class: "form-control"%>
     </div>
-    <div>
+    <div class="form-group">
       <%= f.label :Institution_membership_valid_till %>
-      <%= f.text_field :Institution_membership_valid_till %>
+      <%= f.text_field :Institution_membership_valid_till , class: "form-control"%>
     </div>
-    <div>
+    <div class="form-group">
       <%= f.label :candidate_csi_membership_number %>
-      <%= f.text_field :candidate_csi_membership_number %>
+      <%= f.text_field :candidate_csi_membership_number, class: "form-control" %>
     </div>
-    <div>
+    <div class="form-group">
       <%= f.label :candidate_csi_membership_number_valid_till %>
-      <%= f.text_field :candidate_csi_membership_number_valid_till %>
+      <%= f.text_field :candidate_csi_membership_number_valid_till, class: "form-control" %>
     </div>
-    <div>
+    <div class="form-group">
       <%= f.label :institution_has_student_branch %>   
       <!--change to radio button-->
-      <%= f.text_field :institution_has_student_branch %>
+      <%= f.text_field :institution_has_student_branch, class: "form-control" %>
     </div>
  
     
-    <div>
+    <div class="form-group">
         <%= f.submit %>
     </div>
 <% end %>   
