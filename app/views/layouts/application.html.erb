@@ -3,10 +3,16 @@
 <head>
   <title>Award</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => false %>
   <%= csrf_meta_tags %>
+  
+  <%= google_webfonts_init({
+    google: ['Roboto Slab', 'Roboto' ,'Josefin Sans','Lato']
+  }) %>
 </head>
 <body>
+  
+
   
 <nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container-fluid">
@@ -19,19 +25,14 @@
         <li>
         <%= link_to('Logout', destroy_user_session_path, method: :delete) %>        
         </li>
-      <% else %>
-        <li>
-        <%= link_to('Login', new_user_session_path)  %>  
-        </li>
       <% end %>
     </ul>
   </div>
 </nav>
 
-<div>
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
-</div>
+<% flash.each do |name, msg| %>
+    <%= content_tag :div, msg, class: "alert_wrapper" %>
+<% end %>
 
 
 <div class="container">

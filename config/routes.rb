@@ -1,9 +1,17 @@
 Rails.application.routes.draw do
-  get 'welcome/index'
+  # get 'welcome/index'
 
   
 
   devise_for :users
+  devise_scope :user do
+    authenticated :user do
+      root :to => 'welcome#index', as: :authenticated_root
+    end
+    unauthenticated :user do
+      root :to => 'devise/sessions#new', as: :unauthenticated_root
+    end
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -18,6 +26,9 @@ Rails.application.routes.draw do
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
   resources :bestaccreditedstudentbranches
+  
+  get '/bestaccreditedstudentbranches/getname/:institution_membership_no' => 'bestaccreditedstudentbranches#getname'
+  
   resources :bestcsiinternationalstudentseventhosts
   resources :highestsponsorshipofcsievents
   resources :longestcontinuoussbcs

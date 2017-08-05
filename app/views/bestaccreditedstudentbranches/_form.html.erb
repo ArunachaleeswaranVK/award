@@ -1,80 +1,101 @@
+
 <%= form_for @bestaccreditedstudentbranch , :html => {:class => "form-horizontal"} do |f| %>
     <div class="form-group">
-      <%= f.label :institution_membership_no , "Institution Membership No.:"%>
-      <%= f.text_field :institution_membership_no , class: "form-control" %>
+      <%= f.label :institution_membership_no , "Institution Membership No:"%>
+      <%= f.text_field :institution_membership_no , class: "form-control" , id:"institution_membership_no_id" %>
     </div>
     <div class="form-group">
       <%= f.label :name_of_the_institution %>
-      <%= f.text_field :name_of_the_institution , class: "form-control"%>
+      <%= f.text_field :name_of_the_institution , class: "form-control" , id:"name_of_the_institution_id"%>
     </div>
-    <div class="form-group">
+     <div class="row">
+    <div class="form-group col-md-4">
       <%= f.label :postal_address %>
-      <%= f.text_field :postal_address , class: "form-control"%>
+      <%= f.text_field :postal_address , class: "form-control" , id:"postal_address_id"%>
     </div>
-    <div class="form-group">
+   
+      
+    
+    <div class="form-group col-md-4">
       <%= f.label :city %>
-      <%= f.text_field :city, class: "form-control" %>
+      <%= f.text_field :city, class: "form-control" , id:"city_id"%>
     </div>
-    <div class="form-group">
+    <div class="form-group col-md-4">
       <%= f.label :pin %>
-      <%= f.text_field :pin, class: "form-control" %>
+      <%= f.text_field :pin, class: "form-control", id:"pin_id" %>
     </div>
-    <div class="form-group">
+    </div>
+    <div class="row">
+    <div class="form-group col-md-4">
       <%= f.label :state %>
-      <%= f.text_field :state , class: "form-control"%>
+      <%= f.text_field :state , class: "form-control", id:"state_id"%>
     </div>
-    <div class="form-group">
+
+    
+    
+      
+    
+    <div class="form-group col-md-4">
       <%= f.label :phone_number %>
-      <%= f.text_field :phone_number, class: "form-control" %>
+      <%= f.text_field :phone_number, class: "form-control", id:"phone_number_id" %>
     </div>
-    <div class="form-group">
+    <div class="form-group col-md-4">
       <%= f.label :emailID %>
-      <%= f.email_field :emailID, class: "form-control" %>
+      <%= f.email_field :emailID, class: "form-control", id:"emailID_id" %>
+    </div>
     </div>
     <div class="form-group">
-      <%= f.label :SBC_name %>
-      <%= f.text_field :SBC_name, class: "form-control" %>
+      <%= f.label :SBC_name , "SBC Name" %>
+      <%= f.text_field :SBC_name, class: "form-control" , id:"SBC_name_id"%>
     </div>
-    <div class="form-group">
-      <%= f.label :SBC_designation %>
-      <%= f.text_field :SBC_designation , class: "form-control"%>
+    <div class="row">
+      
+    
+    <div class="form-group col-md-3">
+      <%= f.label :SBC_designation , "SBC Designation" %>
+      <%= f.text_field :SBC_designation , class: "form-control" , id:"SBC_designation_id"%>
     </div>
-    <div class="form-group">
-      <%= f.label :SBC_department %>
-      <%= f.text_field :SBC_department, class: "form-control" %>
+    <div class="form-group col-md-3">
+      <%= f.label :SBC_department , "SBC Department" %>
+      <%= f.text_field :SBC_department, class: "form-control" , id:"SBC_department_id"%>
     </div>
     
-    <div class="form-group">
-      <%= f.label :SBC_emailID %>
-      <%= f.text_field :SBC_emailID , class: "form-control"%>
+      
+    
+    <div class="form-group col-md-3">
+      <%= f.label :SBC_emailID , "SBC Email ID" %>
+      <%= f.text_field :SBC_emailID , class: "form-control" , id:"SBC_emailID_id"%>
     </div>
-    <div class="form-group">
-      <%= f.label :SBC_phone_number %>
-      <%= f.text_field :SBC_phone_number , class: "form-control"%>
+    <div class="form-group col-md-3">
+      <%= f.label :SBC_phone_number , "SBC Phone number" %>
+      <%= f.text_field :SBC_phone_number , class: "form-control" , id:"SBC_phone_number_id"%>
     </div>
-    <div class="form-group">
-      <%= f.label :SBC_CSI_membership_no %>
-      <%= f.text_field :SBC_CSI_membership_no , class: "form-control"%>
     </div>
-    <div class="form-group">
+    
+    <div class="row">
+      
+    
+    <div class="form-group col-md-4">
+      <%= f.label :SBC_CSI_membership_no , "SBC CSI Membership No" %>
+      <%= f.text_field :SBC_CSI_membership_no , class: "form-control", id:"SBC_CSI_membership_no_id" %>
+    </div>
+    <div class="form-group col-md-4">
       <%= f.label :no_of_csi_voulenteers %>
-      <%= f.text_field :no_of_csi_voulenteers , class: "form-control"%>
+      <%= f.text_field :no_of_csi_voulenteers , class: "form-control", id:"no_of_csi_voulenteers_id"%>
     </div>
-    <div class="form-group">
+    <div class="form-group col-md-4">
       <%= f.label :no_of_csi_voulenteers_added %>
-      <%= f.text_field :no_of_csi_voulenteers_added , class: "form-control"%>
+      <%= f.text_field :no_of_csi_voulenteers_added , class: "form-control" , id:"no_of_csi_voulenteers_added_id"%>
+    </div>
     </div>
     
     
-    
     <div class="form-group">
-        
-        <%= f.submit %>
+        <div class="col-md-offset-5 col-md-2">
+            <%= f.submit "Submit" , class: "btn btn-primary btn-lg" %>
+        </div>
     </div>
 <% end %>   
   
 
-
-   
- 
      

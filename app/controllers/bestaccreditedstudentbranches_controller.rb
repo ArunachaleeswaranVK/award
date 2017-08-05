@@ -1,8 +1,11 @@
 class BestaccreditedstudentbranchesController < ApplicationController
     
     before_action :set_award , only: [:edit,:update,:show,:destroy]
-    before_action :authenticate_user!, except: [:index,:show]
+    before_action :authenticate_user!, except: [:show]
     
+    def getname
+        @bestaccreditedstudentbranch = Bestaccreditedstudentbranch.where(institution_membership_no: params[:institution_membership_no]).first
+    end
     
     def index
         @bestaccreditedstudentbranches = Bestaccreditedstudentbranch.all
@@ -20,6 +23,7 @@ class BestaccreditedstudentbranchesController < ApplicationController
         @bestaccreditedstudentbranch = Bestaccreditedstudentbranch.new(bestaccreditedstudentbranch_params)
         
         if @bestaccreditedstudentbranch.save
+            flash[:notice] = " Your response has been recorded"
             redirect_to @bestaccreditedstudentbranch
         else
             render "new"
@@ -33,6 +37,7 @@ class BestaccreditedstudentbranchesController < ApplicationController
     
     def update
         if @bestaccreditedstudentbranch.update(bestaccreditedstudentbranch_params)
+            flash[:notice] = "Your response has been modified"
             redirect_to @bestaccreditedstudentbranch
         else
             render "edit"
@@ -41,7 +46,8 @@ class BestaccreditedstudentbranchesController < ApplicationController
     
     def destroy
         @bestaccreditedstudentbranch.destroy
-        redirect_to bestaccreditedstudentbranches_path
+        flash[:notice] = "Your response has been deleted"
+        redirect_to root_path
     end
     
     private

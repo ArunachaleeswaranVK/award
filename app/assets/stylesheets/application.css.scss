@@ -14,3 +14,67 @@
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+.alert_wrapper{
+    position: absolute;
+    width: 100%;
+    z-index: 999;
+    background: #1d6fda;
+    padding: 2.5rem 0;
+    text-align: center;
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+body { 
+    padding-top: 55px;
+//     background: url("https://www.innovation-procurement.org/uploads/RTEmagicC_PPI-Platform_star_award__Elnur_01.jpg.jpg") no-repeat center center fixed; 
+//   -webkit-background-size: cover;
+//   -moz-background-size: cover;
+//   -o-background-size: cover;
+//   background-size: cover;
+}
+a{
+    color: black;
+}
+a:hover{
+    text-decoration: none;
+}
+
+.award-area{
+    font-family: "Lato";
+    
+}
+.award-title{
+    background-color: #f5f8fd;
+    border: 0px solid #dbdbe8;
+    border-radius: 5px;
+    padding: 1em;
+    margin-bottom: 1em;
+    text-align: left;
+    
+}
+#award-banner{
+    
+    padding: 0.25em;
+    font-weight: bold;
+    color: rgb(80, 116, 177);
+}
+.submitted-details{
+    font-family: Lato;
+    font-size: 1.5em;
+    margin: 1em;
+    border: 0px solid rgba(10, 10, 10, 0.12);
+    border-radius: 5px;
+    padding: 0.5em;
+    background-color: #f6f7ff;
+}
+.showpage-links{
+    font-size: 1.7em;
+    text-align: center;
+}
+.form-horizontal .form-group{
+    margin-right: 15px;
+}

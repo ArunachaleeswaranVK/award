@@ -1,36 +1,46 @@
-<h1 align="center">AWARDS</h1>
+<h1 align="center" id="award-banner">AWARDS</h1>
 
-<h2><%= link_to "Best Accredited Student Branch Award" , new_bestaccreditedstudentbranch_path %> 
-<% if current_user.try(:admin?) %> |
-<%= link_to "All Awards Details Submitted" , bestaccreditedstudentbranches_path %>
-<% end %>
-</h2>
-<br>
-<h2><%= link_to "Best CSI International students event host Award" , new_bestcsiinternationalstudentseventhost_path %>
-<% if current_user.try(:admin?) %> |
-<%= link_to "All Awards Details Submitted" , bestcsiinternationalstudentseventhosts_path %>
-<% end %>
-</h2>
-<br>
-<h2><%= link_to "Highest sponsorship of CSI events Award" , new_highestsponsorshipofcsievent_path %> 
-<% if current_user.try(:admin?) %> |
-<%= link_to "All Awards Details Submitted" , highestsponsorshipofcsievents_path %>
-<% end %>
-</h2>
-<br>
-<h2><%= link_to "Longest continuous SBC Award" , new_longestcontinuoussbc_path %> 
-<% if current_user.try(:admin?) %> |
-<%= link_to "All Awards Details Submitted" , longestcontinuoussbcs_path %>
-<% end %>
-</h2>
-<br>
-<h2><%= link_to "Faculty with maximum publishing in CSI Publications Award" , new_facmaxpublishing_path %> 
-<% if current_user.try(:admin?) %> |
-<%= link_to "All Awards Details Submitted" , facmaxpublishings_path %>
-<% end %>
-</h2>
+<div class="container award-area">
+    
+<div class="award-title">
+    <h2><%= link_to "Best Accredited Student Branch Award" , new_bestaccreditedstudentbranch_path %> 
+    <% if current_user.try(:admin?) %> |
+    <%= link_to "All Awards Details Submitted" , bestaccreditedstudentbranches_path %>
+    <% end %>
+    </h2>
+</div>
 
-<br></br>
+<div class="award-title">
+    <h2><%= link_to "Best CSI International students event host Award" , new_bestcsiinternationalstudentseventhost_path %>
+    <% if current_user.try(:admin?) %> |
+    <%= link_to "All Awards Details Submitted" , bestcsiinternationalstudentseventhosts_path %>
+    <% end %>
+    </h2>
+</div>
 
+<div class="award-title">
+   <h2><%= link_to "Highest sponsorship of CSI events Award" , new_highestsponsorshipofcsievent_path %> 
+    <% if current_user.try(:admin?) %> |
+    <%= link_to "All Awards Details Submitted" , highestsponsorshipofcsievents_path %>
+    <% end %>
+    </h2> 
+</div>
 
+<div class="award-title">
+    <h2><%= link_to "Longest continuous SBC Award" , new_longestcontinuoussbc_path %> 
+    <% if current_user.try(:admin?) %> |
+    <%= link_to "All Awards Details Submitted" , longestcontinuoussbcs_path %>
+    <% end %>
+    </h2>
+</div>
+
+<div class="award-title">
+   <h2><%= link_to "Faculty with maximum publishing in CSI Publications Award" , new_facmaxpublishing_path %> 
+    <% if current_user.try(:admin?) %> |
+    <%= link_to "All Awards Details Submitted" , facmaxpublishings_path %>
+    <% end %>
+    </h2> 
+</div>
+
+</div>
 
